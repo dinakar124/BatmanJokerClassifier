@@ -1,3 +1,4 @@
+#! python3
 import keras
 import numpy as np
 import tensorflow as tf
@@ -6,10 +7,10 @@ from keras.layers import *
 from keras.models import *
 from keras.optimizers import *
 from keras.preprocessing import image
-from scipy.misc import imread, imresize,imshow
+from PIL import Image
 
-img_path = 'test_images/batman.jpg'
-img = cv2.imread(img_path)
+img_path = 'test_images/1677699.jpg'
+img  = cv2.imread(img_path)
 img = cv2.resize(img, (224, 224))
 x = np.array([img], dtype = "float32").reshape(-1, 224, 224, 3) / 255.0
 
